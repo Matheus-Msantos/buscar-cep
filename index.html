@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
-  <title>Buscar CEP</title>
+  <title> Buscar CEP </title>
 
   <!-- JS -->
   <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/4d52201842.js" crossorigin="anonymous"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
 <body>
-  <form>
 
-    <label>CEP</label> <br>
-    <input id="code" type="text" maxlength="9"> <br> <br>
+  <div class="screen-full-center">
 
-    <label>Logradouro</label> <br>
-    <input id="address" type="text"> <br>
+    <div class="main">
+      <h1 class="title"><span class="text-blueWhite"> Busca </span> RUA </h1>
 
-    <label>Bairo</label> <br>
-    <input id="district" type="text"> <br>
+      <form onsubmit="redirectPage(event)">
 
-    <label>Cidade</label> <br>
-    <input id="city" type="text"> <br>
+        <input id="code" class="cep" type="text" maxlength="9" placeholder="04863-320">
+        <button class="btn"> <i class="fas fa-arrow-right fa-lg"></i> </button>
 
-    <label>Uf</label> <br>
-    <input id="state" type="text"> <br>
+      </form>
 
-  </form>
+    </div>
+
+    <div class="text">
+
+      <p>
+        Rua tal, 300, judas perdeu as botas, sp
+      </p>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
