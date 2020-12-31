@@ -1,3 +1,9 @@
+function redirectPage(event) {
+  event.preventDefault();
+
+}
+
+
 window.addEventListener('DOMContentLoaded', function () {
 
   const cep = document.querySelector('#code');
@@ -29,6 +35,3 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 
 });
-
-
-
