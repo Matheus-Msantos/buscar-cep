@@ -23,14 +23,15 @@
 
       <form onsubmit="redirectPage(event)">
 
-        <input id="code" class="cep" type="text" maxlength="9" placeholder="04863-320">
-        <button class="btn" onclick="hide()"> <i class="fas fa-arrow-right fa-lg"></i> </button>
+        <input id="code" class="cep" type="text" maxlength="9" data-min-length="3" placeholder="04863-320">
+        <button class="btn" onclick="return validate()"> <i class="fas fa-arrow-right fa-lg"></i> </button>
+        <span id="messageErro" class="msg"></span>
 
       </form>
 
     </div>
 
-    <div class="text-hidden">
+    <div class="text-hidden" id="textHidden">
       <p id="info">
         Nosso sistema busca sempre manter o catálogo de endereços atualizado, além de identificar quando um CEP tem seu
         número alterado ou desmembrado.
