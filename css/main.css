@@ -3,6 +3,7 @@
   --blue: #0063f8;
   --blueWhite: #9CC4FF;
   --gray: #5A5A5A;
+  --red: #FF9C9C;
 }
 
 * {
@@ -47,10 +48,15 @@ body {
   border-radius: 4px;
 }
 
+.cep::placeholder{
+  padding-left: 10px;
+}
+
 .btn {
   background-color: var(--blueWhite);
   width: 44px;
   height: 44px;
+  margin-left: 12px;
   border: 2px solid var(--blue);
   border-radius: 50%;
   outline: none;
@@ -69,4 +75,11 @@ body {
   border: 2px solid var(--blueWhite);
   border-radius: 8px;
   height: 104px;
+}
+
+.msg {
+  color: var(--red);
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
 }
