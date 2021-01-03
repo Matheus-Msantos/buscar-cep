@@ -24,17 +24,24 @@
       <form onsubmit="redirectPage(event)">
 
         <input id="code" class="cep" type="text" maxlength="9" placeholder="04863-320">
-        <button class="btn"> <i class="fas fa-arrow-right fa-lg"></i> </button>
+        <button class="btn" onclick="hide()"> <i class="fas fa-arrow-right fa-lg"></i> </button>
 
       </form>
 
     </div>
 
-    <div class="text">
-
-      <p>
-        Rua tal, 300, judas perdeu as botas, sp
+    <div class="text-hidden">
+      <p id="info">
+        Nosso sistema busca sempre manter o catálogo de endereços atualizado, além de identificar quando um CEP tem seu
+        número alterado ou desmembrado.
       </p>
+
+      <span id="message"></span>
+      <span id="address"></span>
+      <span id="district"></span>
+      <span id="city"></span>
+      <span id="state"></span>
+
     </div>
 
   </div>

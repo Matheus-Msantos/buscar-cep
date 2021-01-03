@@ -1,17 +1,35 @@
 function redirectPage(event) {
   event.preventDefault();
+}
+
+function hide() {
+  document.querySelector('#info').textContent = '';
 
 }
 
 
 window.addEventListener('DOMContentLoaded', function () {
-
   const cep = document.querySelector('#code');
 
   const showData = (result) => {
     for (const camp in result) {
-      if (document.querySelector('#' + camp)) {
-        document.querySelector('#' + camp).value = result[camp];
+
+      if (result['ok'] !== true) {
+
+        document.querySelector('#message').textContent = 'Resultado não encontrado';
+        document.querySelector('#address').textContent = '';
+        document.querySelector('#district').textContent = '';
+        document.querySelector('#city').textContent = '';
+        document.querySelector('#state').textContent = '';
+
+      } else if (document.querySelector('#' + camp)) {
+
+        document.querySelector('#address').textContent = result['address'] + ',';
+        document.querySelector('#district').textContent = result['district'] + ',';
+        document.querySelector('#city').textContent = result['city'] + '-';
+        document.querySelector('#state').textContent = result['state'];
+        document.querySelector('#message').textContent = '';
+
       }
     }
   }
@@ -33,5 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
       .then(data => showData(data))
       .catch(e => console.log('Erro: ' + e, e.message))
   })
+
+
 
 });
