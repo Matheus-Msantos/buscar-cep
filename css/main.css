@@ -25,7 +25,7 @@ body {
   
 }
 .main{
-  flex-basis: 50%;
+  flex-basis: 30%;
   text-align: end;
   padding-right: 41px;
 }
@@ -43,7 +43,7 @@ body {
 
 .cep {
   width: 186px;
-  height: 35px;
+  height: 44px;
   border-radius: 4px;
 }
 
@@ -53,18 +53,20 @@ body {
   height: 44px;
   border: 2px solid var(--blue);
   border-radius: 50%;
+  outline: none;
 }
 
 .btn i {
   color: var(--yellow);
 }
 
-.text {
-  flex-basis: 30%;
-  border: 2px solid var(--blueWhite);
-  border-radius: 8px;
+.text-hidden {
+  color: var(--gray);
+  flex-basis: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray);
+  border: 2px solid var(--blueWhite);
+  border-radius: 8px;
+  height: 104px;
 }
