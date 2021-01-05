@@ -19,11 +19,11 @@
   <div class="screen-full-center">
 
     <div class="main">
-      <h1 class="title"><span class="text-blueWhite"> Busca </span> RUA </h1>
+      <h1 class="title"><span class="text-blueWhite"> Busca</span>Rua </h1>
 
       <form onsubmit="redirectPage(event)">
 
-        <input id="code" class="cep" type="text" maxlength="9" data-min-length="3" placeholder="04863-320">
+        <input id="code" class="cep" type="text" maxlength="9" placeholder="04863-320">
         <button class="btn" onclick="return validate()"> <i class="fas fa-arrow-right fa-lg"></i> </button>
         <span id="messageErro" class="msg"></span>
 
@@ -32,16 +32,18 @@
     </div>
 
     <div class="text-hidden" id="textHidden">
+
       <p id="info">
         Nosso sistema busca sempre manter o catálogo de endereços atualizado, além de identificar quando um CEP tem seu
         número alterado ou desmembrado.
       </p>
-
-      <span id="message"></span>
-      <span id="address"></span>
-      <span id="district"></span>
-      <span id="city"></span>
-      <span id="state"></span>
+      <div>
+        <span id="message"></span>
+        <span id="address"></span>
+        <span id="district"></span>
+        <span id="city"></span>
+        <span id="state"></span>
+      </div>
 
     </div>
 
