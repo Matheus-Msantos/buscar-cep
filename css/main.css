@@ -86,5 +86,6 @@ body {
   color: var(--red);
   display: block;
   margin-top: 5px;
+  margin-right: 61px;
   font-size: 13px;
 }
