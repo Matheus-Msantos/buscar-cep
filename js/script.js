@@ -6,20 +6,41 @@ function redirectPage(event) {
 
 function validate() {
 
+
   document.querySelector('#info').textContent = '';
   document.querySelector('#messageErro').textContent = '';
+
   document.getElementById('code').style.borderColor = "grey";
 
-  const validateCep = document.querySelector('#code');
+  const myCep = document.querySelector('#code');
 
-  if (validateCep.value == '') {
+  if (myCep.value == '') {
 
-    document.querySelector('#messageErro').textContent = 'Cep inválido';
+    document.querySelector('#messageErro').textContent = 'Cep não informado';
     document.getElementById('code').style.borderColor = "#FF9C9C";
 
+  } else {
+    validateCep(myCep.value);
   }
 
 }
+
+
+function validateCep(cep) {
+
+  const regExComplet = /^[0-9]{5}-[0-9]{3}$/;
+  const regExNumber = /^[0-9]{8}$/;
+
+  if (cep.length >= 0) {
+    if (regExComplet.test(cep) || regExNumber.test(cep)) {
+      return true;
+    } else {
+      return document.querySelector('#messageErro').textContent = 'Cep invalido';
+    }
+  }
+
+}
+
 
 window.addEventListener('DOMContentLoaded', function () {
   const cep = document.querySelector('#code');
