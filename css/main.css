@@ -50,9 +50,6 @@ body {
   width: 186px;
   height: 44px;
   border-radius: 4px;
-}
-
-.cep::placeholder{
   padding-left: 10px;
 }
 
@@ -89,3 +86,21 @@ body {
   margin-right: 61px;
   font-size: 13px;
 }
+
+@media only screen and (max-width: 1360px) {
+  .screen-full-center{ flex-direction: column; }
+
+  .text-hidden{ 
+    flex-basis: 10%;
+  }
+
+  .test{
+    width:  321px;
+  }
+
+  .main{ 
+    padding-right: 0; 
+    flex-basis: 20%;
+  }
+}
+
