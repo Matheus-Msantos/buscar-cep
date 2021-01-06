@@ -67,6 +67,10 @@ body {
   color: var(--yellow);
 }
 
+.test {
+  width:  321px;
+}
+
 .text-hidden {
   color: var(--gray);
   flex-basis: 20%;
